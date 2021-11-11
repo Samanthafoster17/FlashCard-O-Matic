@@ -37,7 +37,8 @@ function ViewDecks() {
 
 
   return (
-    <div className="view-decks">
+   <>
+   <div className="view-decks">
       <nav aria-label="breadcrumb">
         <ol className="breadcrumb">
           <li className="breadcrumb-item">
@@ -65,11 +66,11 @@ function ViewDecks() {
       </div>
 
 
-      <div className="cards">
+      {/* <div key={cards.length} className="cards"> */}
 
         {cards.map((card) => (
 
-          <div className="row">
+          <div key={card.id} className="row">
             <div className="col-sm-8">
               <div className="card mb-3" >
                 <div className="card-body">
@@ -87,8 +88,8 @@ function ViewDecks() {
           </div>
         ))}
       </div>
-
-    </div>
+</>
+    // </div>
   );
 }
 

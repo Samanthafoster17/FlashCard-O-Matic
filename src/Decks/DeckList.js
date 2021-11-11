@@ -26,10 +26,11 @@ function LoadDecks() {
   }
 
   return (
+    <>
     <div className="loadDecks">
       <Link to={"/decks/new"}><button className="btm btn-secondary mb-3"><span className="oi oi-plus" />Create Deck</button></Link>
       {decks.map((deck) => (
-        <div className="row">
+        <div key={deck.id} className="row">
           <div className="col-sm-6">
             <div className="card mb-3" >
               <div className="card-body">
@@ -46,6 +47,7 @@ function LoadDecks() {
         </div>
       ))}
     </div>
+    </>
   );
 }
 
