@@ -38,9 +38,9 @@ export default function CreateDeck() {
             </nav>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="name" className="form-label">Name</label>
-                <input id="name" name="name" className="form-control mb-2" type="text" onChange={handleForm} value={deck.name} required></input>
+                <input id="name" name="name" className="form-control mb-2" type="text" onChange={handleForm} required></input>
                 <label htmlFor="description" className="form-label">Description</label>
-                <textarea className="form-control" style={{ height: "100px" }} id="description" name="description" onChange={handleForm} value={deck.description} required></textarea>
+                <textarea className="form-control" style={{ height: "100px" }} id="description" name="description" onChange={handleForm} required></textarea>
                 <button className="btn btn-primary mt-3" type="submit">Submit</button>
             </form>
         </>
